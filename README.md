@@ -1,0 +1,1 @@
+The Barangay Census System is a digital tool that collects, organizes, and manages household and resident information in a barangay. It simplifies data gathering, ensures accuracy, and provides quick access to reports, helping officials make informed decisions and deliver better community services.
