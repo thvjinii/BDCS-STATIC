@@ -1,0 +1,40 @@
+.text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Fade-Up Animation */
+@keyframes fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-up-1 {
+    animation: fade-up 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+.animate-fade-up-2 {
+    animation: fade-up 0.8s ease-out 0.3s forwards;
+    opacity: 0;
+}
+
+/* Hover animation for achievements */
+.achievement-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.achievement-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}

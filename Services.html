@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/Services.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="flex flex-col min-h-screen" style="font-family: 'Poppins', sans-serif;">
+
+  <header class="fixed top-0 left-0 w-full h-16 bg-white shadow-md z-50">
+    <nav class="flex items-center justify-between px-6 h-full">
+      <div class="flex items-center">
+        <label for="menu-toggle" class="cursor-pointer md:hidden text-2xl mr-4">☰</label>
+        <input type="checkbox" id="menu-toggle" class="hidden peer">
+        <ul
+          class="hidden peer-checked:flex absolute top-16 left-0 w-full flex-col gap-6 py-6 text-lg bg-white shadow-md md:static md:flex md:flex-row md:items-center md:gap-10 md:py-0 md:shadow-none md:bg-transparent">
+          <li><a class="no-underline text-black font-bold px-4 hover:text-blue-600" href="Home.html">Home</a></li>
+          <li><a class="no-underline text-black font-bold px-4 hover:text-blue-600" href="About.html">About</a></li>
+          <li><a class="no-underline text-black font-bold px-4 hover:text-blue-600"
+              href="Communities.html">Communites</a></li>
+          <li><a class="no-underline text-black font-bold px-4 hover:text-blue-600" href="Services.html">Services</a>
+          </li>
+        </ul>
+      </div>
+      <img src="Images/Icon.png" alt="Logo" class="h-8 w-auto">
+    </nav>
+  </header>
+
+  <main class="flex-1">
+
+    <section class="relative h-[50vh] md:h-[60vh] lg:h-[80vh] bg-cover bg-center"
+      style="background-image: url('Images/Services/Bg.png');">
+      <div class="absolute inset-0 bg-black/40"></div>
+      <div class="absolute bottom-0 left-0 z-20 p-4 md:p-8 lg:p-12">
+        <h2
+          class="text-white font-extrabold text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight drop-shadow text-shadow animate-fade-up-1">
+          Services
+        </h2>
+        <p
+          class="text-white mt-3 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl w-full leading-relaxed drop-shadow-md text-shadow animate-fade-up-2">
+          Serving the barangay with key civic assistance, including disaster preparedness and safety information access
+          throughout the local area.
+          Our dedicated programs aim to strengthen community resilience, promote public awareness, and ensure every
+          resident receives timely support.
+          Together, we work toward a safer and more connected Balatas.
+        </p>
+      </div>
+    </section>
+
+
+    <section class="py-24 w-full flex flex-col items-center justify-start text-center px-6 sm:px-8">
+      <h1 class="text-3xl sm:text-5xl font-bold text-gray-800 mt-[1px]">Barangay Balatas Services Hub</h1>
+      <h2 class="text-base sm:text-xl font-semibold text-gray-800 mt-4 mb-12">Your Essential Services, Delivered with
+        Precision and Transparency.</h2>
+
+      <div class="relative grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl">
+
+        <div
+          class="bg-[#A1D99B] p-8 rounded-2xl shadow-lg text-gray-800 text-justify transform transition-all duration-300 hover:scale-105 hover:bg-[#8FC88A] hover:shadow-xl">
+          <h3 class="text-xl sm:text-2xl font-semibold mb-4 text-center">Documentation & Permits</h3>
+          <ul class="list-disc list-inside space-y-1 text-sm sm:text-base">
+            <li>Barangay Clearance</li>
+            <li>Indigency Certificate</li>
+            <li>Residency Certification</li>
+            <li>Business Permits</li>
+          </ul>
+        </div>
+
+
+        <div
+          class="bg-[#A1D99B] p-8 rounded-2xl shadow-lg text-gray-800 text-justify transform transition-all duration-300 hover:scale-105 hover:bg-[#8FC88A] hover:shadow-xl">
+          <h3 class="text-xl sm:text-2xl font-semibold mb-4 text-center">Health & Wellness</h3>
+          <ul class="list-disc list-inside space-y-1 text-sm sm:text-base">
+            <li>Free Basic Medical Check-ups</li>
+            <li>Vaccination Schedules</li>
+            <li>Dengue/COVID-19 Awareness Programs</li>
+          </ul>
+        </div>
+
+
+        <div
+          class="bg-[#A1D99B] p-8 rounded-2xl shadow-lg text-gray-800 text-justify transform transition-all duration-300 hover:scale-105 hover:bg-[#8FC88A] hover:shadow-xl">
+          <h3 class="text-xl sm:text-2xl font-semibold mb-4 text-center">Social & Livelihood</h3>
+          <ul class="list-disc list-inside space-y-1 text-sm sm:text-base">
+            <li>Senior Citizen & PWD Registration</li>
+            <li>Solo Parent ID Assistance</li>
+            <li>Disaster Relief & Assistance</li>
+            <li>Job Placement Referrals</li>
+          </ul>
+        </div>
+
+        <div
+          class="bg-[#A1D99B] p-8 rounded-2xl shadow-lg text-gray-800 text-justify transform transition-all duration-300 hover:scale-105 hover:bg-[#8FC88A] hover:shadow-xl">
+          <h3 class="text-xl sm:text-2xl font-semibold mb-4 text-center">Community & Safety</h3>
+          <ul class="list-disc list-inside space-y-1 text-sm sm:text-base">
+            <li>Lupon Tagapamayapa (Mediation) Services</li>
+            <li>Barangay Tanod & Security Coordination</li>
+            <li>Local Infrastructure Feedback</li>
+          </ul>
+        </div>
+
+        <img src="../Images/Services/bagrangayLogo.png" alt="Barangay Seal"
+          class="hidden md:block absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 object-contain rounded-full bg-white p-2 shadow-lg">
+      </div>
+    </section>
+
+
+    <section class="py-24 w-full flex flex-col items-start justify-start text-left px-6 sm:px-16">
+      <h1 class="text-4xl sm:text-7xl font-bold text-gray-800 mb-16">How to avail our services?</h1>
+
+      <div class="w-full flex flex-col md:flex-row justify-center items-center md:items-start gap-8 mb-24">
+
+        <div
+          class="bg-[#A1D99B] w-full md:w-1/3 p-8 pt-20 rounded-2xl shadow-lg text-gray-800 relative text-center transform transition-all duration-300 hover:scale-105 hover:bg-[#8FC88A] hover:shadow-xl">
+          <img src="../Images/Services/inquire.png" alt="Inquire Icon"
+            class="w-24 sm:w-32 h-24 sm:h-32 object-contain absolute -top-12 sm:-top-16 left-1/2 transform -translate-x-1/2 bg-white rounded-full p-3 shadow-md border-4 border-[#A1D99B]">
+          <h3 class="text-xl sm:text-2xl font-semibold mb-2 ">Inquire</h3>
+          <p class="text-sm sm:text-base">Contact our office or check this website for the requirements specific to your
+            needed document or service.</p>
+        </div>
+
+
+        <div
+          class="bg-[#A1D99B] w-full md:w-1/3 p-8 pt-20 rounded-2xl shadow-lg text-gray-800 relative text-center transform transition-all duration-300 hover:scale-105 hover:bg-[#8FC88A] hover:shadow-xl">
+          <img src="../Images/Services/verify.png" alt="Verify Icon"
+            class="w-24 sm:w-32 h-24 sm:h-32 object-contain absolute -top-12 sm:-top-16 left-1/2 transform -translate-x-1/2 bg-white rounded-full p-3 shadow-md border-4 border-[#A1D99B]">
+          <h3 class="text-xl sm:text-2xl font-semibold mb-2">Verify</h3>
+          <p class="text-sm sm:text-base">Present your requirements to our attending staff. With our BDCS, identity and
+            residency verification is fast and secure.</p>
+        </div>
+
+
+        <div
+          class="bg-[#A1D99B] w-full md:w-1/3 p-8 pt-20 rounded-2xl shadow-lg text-gray-800 relative text-center transform transition-all duration-300 hover:scale-105 hover:bg-[#8FC88A] hover:shadow-xl">
+          <img src="../Images/Services/receive.png" alt="Receive Icon"
+            class="w-24 sm:w-32 h-24 sm:h-32 object-contain absolute -top-12 sm:-top-16 left-1/2 transform -translate-x-1/2 bg-white rounded-full p-3 shadow-md border-4 border-[#A1D99B]">
+          <h3 class="text-xl sm:text-2xl font-semibold mb-2 ">Receive</h3>
+          <p class="text-sm sm:text-base">Collect your document or service confirmation. Most clearances are processed
+            the same day for your convenience.</p>
+        </div>
+      </div>
+
+
+      <h1 class="text-4xl sm:text-7xl font-bold text-gray-800 mb-12 w-full">Get in Touch</h1>
+
+      <div class="flex justify-center items-center w-full py-8">
+        <div class="bg-[#A1D99B] rounded-2xl p-6 sm:p-10 w-full md:w-5/6 lg:w-4/5 xl:w-3/4">
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
+            <div class="bg-white rounded-lg p-6 lg:p-8 text-center shadow-md flex flex-col items-center justify-center">
+              <img src="../Images/Services/location.png" alt="Office Location Icon"
+                class="h-10 w-10 md:h-12 md:w-12 lg:h-14 lg:w-14 mx-auto mb-4">
+              <h3 class="text-lg md:text-xl lg:text-2xl font-bold mb-2">Office Location</h3>
+              <p class="text-gray-600 text-sm md:text-base leading-relaxed">J6J2+8QW, Kayangga St, Naga City, 4400
+                Camarines Sur</p>
+            </div>
+
+            <div class="bg-white rounded-lg p-6 lg:p-8 text-center shadow-md flex flex-col items-center justify-center">
+              <img src="../Images/Services/workinghours.png" alt="Working Hours Icon"
+                class="h-10 w-10 md:h-12 md:w-12 lg:h-14 lg:w-14 mx-auto mb-4">
+              <h3 class="text-lg md:text-xl lg:text-2xl font-bold mb-2">Working Hours</h3>
+              <p class="text-gray-600 text-sm md:text-base leading-relaxed">Sun-Fri: 8AM to 5PM<br>Sat: 8AM to 12NN</p>
+            </div>
+
+            <div class="bg-white rounded-lg p-6 lg:p-8 text-center shadow-md flex flex-col items-center justify-center">
+              <img src="../Images/Services/communication.png" alt="Communication Icon"
+                class="h-10 w-10 md:h-12 md:w-12 lg:h-14 lg:w-14 mx-auto mb-4">
+              <h3 class="text-lg md:text-xl lg:text-2xl font-bold mb-2">Contact Us</h3>
+              <p class="text-gray-600 text-sm md:text-base leading-relaxed">09xx xxx xxx<br>xx xxx@gmail.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </section>
+
+  </main>
+
+
+  <footer class="bg-[#005A32] text-white mt-auto">
+    <div class="container mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-sm text-gray-200 text-center md:text-left">
+        Copyright © 2025. Balatas, Naga City. All Rights Reserved.
+      </p>
+      <div class="font-bold text-2xl sm:text-3xl md:text-5xl text-center md:text-right">
+        BALATAS NAGA CITY
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

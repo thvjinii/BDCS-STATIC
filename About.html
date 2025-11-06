@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Barangay Balatas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="https://balkan.app/js/OrgChart.js"></script>
+  <link rel="stylesheet" href="css/About.css" />
+
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <header class="fixed top-0 left-0 w-full h-16 bg-white shadow-md z-50">
+    <nav class="flex items-center justify-between px-6 h-full">
+      <div class="flex items-center">
+        <label for="menu-toggle" class="cursor-pointer md:hidden text-2xl mr-4">☰</label>
+        <input type="checkbox" id="menu-toggle" class="hidden peer">
+        <ul
+          class="hidden peer-checked:flex absolute top-16 left-0 w-full flex-col gap-6 py-6 text-lg bg-white shadow-md md:static md:flex md:flex-row md:items-center md:gap-10 md:py-0 md:shadow-none md:bg-transparent">
+          <li><a class="no-underline text-black font-bold px-4 hover:text-blue-600" href="Home.html">Home</a>
+          </li>
+          <li><a class="no-underline text-black font-bold px-4 hover:text-blue-600" href="About.html">About</a></li>
+          <li><a class="no-underline text-black font-bold px-4 hover:text-blue-600"
+              href="Communities.html">Communites</a>
+          </li>
+          <li><a class="no-underline text-black font-bold px-4 hover:text-blue-600" href="Services.html">Services</a>
+          </li>
+        </ul>
+      </div>
+      <img src="Images/Icon.png" alt="Logo" class="h-8 w-auto">
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="relative h-60 md:h-90 lg:h-120 overflow-hidden">
+    <img src="images/About/Naga.jpg" alt="Naga City View" class="absolute inset-0 w-full h-full object-cover" />
+    <div class="absolute bottom-0 left-0 z-20 p-4 md:p-8 lg:p-12 fade-up-onload">
+      <h2 class="text-white font-extrabold text-xl md:text-3xl leading-tight drop-shadow">About us</h2>
+      <p class="text-white text-xs md:text-sm mt-2 leading-relaxed">
+        We are students from the University of Nueva Caceres developing a Family Database Management System for Barangay
+        Balatas, Naga City. Our goal is to improve local governance by streamlining record-keeping, enhancing
+        transparency, and ensuring efficient service delivery to all residents.
+      </p>
+    </div>
+  </section>
+  <!-- ORG CHART -->
+  <section class="w-full max-w-6xl mx-auto mt-12 px-4">
+    <h2 data-animate="fade-up" class="text-center text-3xl md:text-4xl font-bold mb-6">
+      BARANGAY BALATAS OFFICIALS
+    </h2>
+
+    <div id="chart-wrapper" data-animate="fade-up" class="w-full flex justify-center overflow-x-auto">
+      <div id="tree" class="flex justify-center items-center 
+              min-w-[280px] sm:min-w-[360px] md:min-w-[480px] lg:min-w-[640px]"></div>
+    </div>
+  </section>
+
+  <script>
+    OrgChart.templates.myTemplate = Object.assign({}, OrgChart.templates.ana);
+    OrgChart.templates.myTemplate.size = [200, 60];
+    OrgChart.templates.myTemplate.node =
+      '<rect x="0" y="0" width="200" height="60" fill="#A1D99B" rx="10" ry="10" stroke-width="0"></rect>';
+    OrgChart.templates.myTemplate.field_0 =
+      '<text class="node-title" style="font-size: 13px;" fill="#000" x="100" y="28" text-anchor="middle">{val}</text>';
+    OrgChart.templates.myTemplate.field_1 =
+      '<text class="node-subtitle" style="font-size: 11px;" fill="#000" x="100" y="46" text-anchor="middle">{val}</text>';
+
+    var chart = new OrgChart(document.getElementById("tree"), {
+      template: "myTemplate",
+      enableDragDrop: false,
+      enableSearch: false,
+      mouseScrool: OrgChart.none,
+      nodeMouseClick: OrgChart.none,
+      align: OrgChart.CENTER,
+      layout: OrgChart.MIXED,
+      collapse: { level: 9999 },
+      toolbar: false,
+      nodeBinding: { field_0: "name", field_1: "title" },
+      nodes: [
+        { id: 1, name: "Ferdinand V. De Hitta", title: "Punong Barangay" },
+        { id: 2, pid: 1, name: "Dominic Dan O. German", title: "Sangguniang Barangay Member" },
+        { id: 3, pid: 1, name: "Natividad G. Rebellon", title: "Sangguniang Barangay Member" },
+        { id: 4, pid: 1, name: "Jovy S. Capistrano", title: "Sangguniang Barangay Member" },
+        { id: 5, pid: 2, name: "Pedro F. San Juan Jr", title: "Sangguniang Barangay Member" },
+        { id: 6, pid: 3, name: "Joseph S. Ibasco Jr.", title: "Sangguniang Barangay Member" },
+        { id: 7, pid: 4, name: "Mercedes J. Delos Santos", title: "Sangguniang Barangay Member" },
+        { id: 8, pid: 4, name: "Joey R. Gomez", title: "Sangguniang Barangay Member" },
+        { id: 9, pid: 3, name: "Zenaida S. Babilonia", title: "Sangguniang Barangay Member" },
+        { id: 10, pid: 2, name: "Dean D. Lizano", title: "Sangguniang Barangay Member" }
+      ]
+    });
+
+    chart.on('render', function () {
+      const svg = document.querySelector('#tree svg');
+      if (svg) {
+        svg.style.display = 'block';
+        svg.style.margin = '0 auto';
+      }
+    });
+
+    window.addEventListener('resize', () => {
+      chart.fit();
+
+    });
+  </script>
+
+  <!-- SDG SECTION -->
+  <section class="py-12">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 data-animate="fade-up" class="text-3xl md:text-4xl font-bold mb-6">Sustainable Development Goals</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 relative">
+        <div data-animate="fade-left" class="flex flex-col items-center text-center hover-grow bg-white p-4 rounded-lg">
+          <img src="images/About/nop.jpg" alt="SDG 1" class="w-50 h-50 rounded shadow-md mb-6">
+          <h3 class="font-bold text-lg md:text-xl mb-3">SDG 1: NO POVERTY</h3>
+          <p class="text-sm text-gray-600">
+            By ensuring efficient and equitable distribution of social aid through a digital tracking system.
+          </p>
+        </div>
+
+        <div data-animate="fade-up" class="flex flex-col items-center text-center hover-grow bg-white p-4 rounded-lg">
+          <img src="images/About/sdg11.png" alt="SDG 11" class="w-50 h-50 rounded shadow-md mb-6">
+          <h3 class="font-bold text-lg md:text-xl mb-3">
+            SDG 11: SUSTAINABLE CITIES AND COMMUNITIES
+          </h3>
+          <p class="text-sm text-gray-600">
+            By providing a tool for more effective and data-driven urban planning and governance at the community level.
+          </p>
+        </div>
+
+        <div data-animate="fade-right"
+          class="flex flex-col items-center text-center hover-grow bg-white p-4 rounded-lg">
+          <img src="images/About/sdg16.png" alt="SDG 16" class="w-50 h-50 rounded shadow-md mb-6">
+          <h3 class="font-bold text-lg md:text-xl mb-3">
+            SDG 16: PEACE, JUSTICE AND STRONG INSTITUTIONS
+          </h3>
+          <p class="text-sm text-gray-600">
+            By promoting transparency, accountability, and the rule of law through better data management and public
+            service delivery.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION & VISION -->
+  <section class="flex justify-center items-center py-16 px-6">
+    <div class="max-w-5xl w-full text-center">
+      <h2 data-animate="fade-up" class="text-left text-3xl md:text-4xl font-bold mb-6 mt-12">What is our mission &
+        vision?</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div data-animate="fade-left" class="rounded-lg p-6 text-left shadow-sm h-80 hover-grow"
+          style="background-color: #A1D99B;">
+          <h2 class="text-2xl font-semibold mb-2 text-center">Mission</h2>
+          <p class="text-gray-700 leading-relaxed text-justify text-lg">
+            To ensure peace and order, promote awareness, and provide opportunities for
+            small businesses and entrepreneurs through livelihood projects and
+            community development, thereby creating a model to the barangay.
+          </p>
+        </div>
+
+        <div data-animate="fade-right" class="rounded-lg p-6 text-left shadow-sm h-80 hover-grow"
+          style="background-color: #A1D99B;">
+          <h2 class="text-2xl font-semibold mb-2 text-center">Vision</h2>
+          <p class="text-gray-700 leading-relaxed text-justify text-lg">
+            A progressive Barangay Balatas that is peaceful, clean, and fosters a
+            strong sense of community and equality.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#005A32] text-white mt-10">
+    <div
+      class="container mx-auto px-6 py-4 flex justify-between items-center flex-col md:flex-row text-center md:text-left">
+      <p class="text-sm text-gray-200 mb-2 md:mb-0">
+        Copyright © 2025. Balatas, Naga City All rights Reserved.
+      </p>
+      <div class="font-bold text-2xl md:text-4xl">BALATAS NAGA CITY</div>
+    </div>
+  </footer>
+</body>
+
+</html>
